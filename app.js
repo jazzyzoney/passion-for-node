@@ -8,7 +8,7 @@ import { frontpagePage } from './util/pagesUtil.js';
 
 app.get("/", (req, res) => {
     //res.sendFile(path.resolve(''))
-    res.send(frontpage)
+    res.send(frontpagePage)
 });
 
 // ========================= PAGES =====================================
