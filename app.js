@@ -4,11 +4,9 @@ const app = express();
 
 app.use(express.static("public"));
 
-import { frontpagePage } from './util/pagesUtil.js';
 
 app.get("/", (req, res) => {
-    //res.sendFile(path.resolve(''))
-    res.send(frontpagePage)
+    res.sendFile(__dirname + "/index.html")
 });
 
 // ========================= PAGES =====================================
