@@ -5,18 +5,46 @@ body {
     background-color: #f0f0f0; /* Light background for the whole page */
     display: flex; /* Use flexbox to ensure container takes full height */
     min-height: 100vh; /* Make body at least viewport height */
+    flex-direction: column;
 }
+
+
+/* Fixed top nav and smaller logo */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: #ffffffcc; /* slight transparency if desired */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+#logo {
+    width: 100px;     /* smaller logo */
+    height: auto;
+    display: block;
+}
+
 
 /* Main Container for Sidebar and Content */
 .container {
-    display: flex; /* Use flexbox to lay out sidebar and content */
+    display: flex;
     width: 100%;
-    max-width: 1200px; /* Max width for the whole application */
-    margin: 20px auto; /* Center the container with some margin */
-    background-color: #fff; /* White background for the main app area */
+    max-width: 1200px;
+    margin: 20px auto 0;
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Important for border-radius on children */
+    overflow: hidden;
+    flex: 1; /* take remaining vertical space so footer sticks to bottom */
+    padding-top: 20px;
+    /* push content below fixed nav */
+    margin-top: 84px; /* >= nav height + spacing */
 }
 
 /* Sidebar Styling */
@@ -48,6 +76,33 @@ body {
     color: white;
     font-weight: bold;
 }
+/* check if these are redundant latur */
+.sidebar-section {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.sidebar-section:last-child {
+    border-bottom: none;
+}
+
+.sidebar-section-title {
+    font-size: 14px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 8px 0;
+    padding-left: 4px;
+}
+
+/* make sure sidebar-item keeps same appearance inside sections */
+.sidebar .sidebar-item {
+    display: block;
+    padding: 8px 4px;
+    margin: 2px 0;
+}
+/* until here  */
+
 
 /* Content Area Styling */
 .content {
@@ -66,4 +121,12 @@ body {
 .content p {
     line-height: 1.6;
     color: #555;
+}
+
+footer {
+    background: #fff;
+    padding: 12px 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    /* footer will remain at bottom because body is column and .container is flex:1 */
 }
