@@ -11,10 +11,13 @@ app.get("/", (req, res) => {
 
 // ========================= PAGES =====================================
 // imports
-import { frontpagePage, functionsPage, loopsPage, variablesPage, packagemanagementPage, modulesPage, devtoolsPage, envvariablesPage, apiPage, crudPage, urlPage, servingfilesPage, fetchingdataPage, htmlstructurePage, redirectionPage, renderingPage, codestructurePage, deploymentPage } from './util/pagesUtil.js'
+import { frontpagePage, gamePage, functionsPage, loopsPage, variablesPage, nodejsandnpmPage, modulesPage, toolsPage, apiPage, crudPage, servingfilesPage, fetchingdataPage, htmlstructurePage, renderingPage, codestructurePage } from './util/pagesUtil.js'
+
+app.get("/game", (req, res) => {
+    res.send(gamePage)
+});
 
 // notes in categories 
-
 // fundamentals
 app.get("/functions", (req, res) => {
     res.send(functionsPage)
@@ -29,20 +32,16 @@ app.get("/variables", (req, res) => {
 });
 
 // the backend environment 
-app.get("/packagemanagement", (req, res) => {
-    res.send(packagemanagementPage)
+app.get("/nodejs&npm", (req, res) => {
+    res.send(nodejsandnpmPage)
 });
 
 app.get("/modules", (req, res) => {
     res.send(modulesPage)
 });
 
-app.get("/devtools", (req, res) => {
-    res.send(devtoolsPage)
-});
-
-app.get("/envvariables", (req, res) => {
-    res.send(envvariablesPage)
+app.get("/tools", (req, res) => {
+    res.send(toolsPage)
 });
 
 // express and rest apis
@@ -52,10 +51,6 @@ app.get("/api", (req, res) => {
 
 app.get("/crud", (req, res) => {
     res.send(crudPage)
-});
-
-app.get("/url", (req, res) => {
-    res.send(urlPage)
 });
 
 app.get("/servingfiles", (req, res) => {
@@ -71,10 +66,6 @@ app.get("/htmlstructure", (req, res) => {
     res.send(htmlstructurePage)
 });
 
-app.get("/redirection", (req, res) => {
-    res.send(redirectionPage)
-});
-
 // web architecture and deployment 
 app.get("/rendering", (req, res) => {
     res.send(renderingPage)
@@ -82,10 +73,6 @@ app.get("/rendering", (req, res) => {
 
 app.get("/codestructure", (req, res) => {
     res.send(codestructurePage)
-});
-
-app.get("/deployment", (req, res) => {
-    res.send(deploymentPage)
 });
 
 // run the server on port 8080

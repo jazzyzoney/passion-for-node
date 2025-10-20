@@ -1,0 +1,27 @@
+<h1>URLs & Serving Files: The Lookbook & Address</h1>
+<p>Your collection is flawless, but it's nothing if no one can see it! You need a way to show off your lookbook (your HTML, CSS, and images) and a clear address (URL) so people know where to find the party.</p>
+
+<hr>
+
+<h2>Anatomy of a URL: The Party Invite</h2>
+<p>A URL looks complicated, but it's really just a party invitation with all the deets. It tells you the location, the specific room, and any special requests.</p>
+
+<pre><code>
+https://www.glam-stack.com/outfits?season=summer
+\___/   \________________/ \______/ \____________/
+  |             |             |            |
+Protocol     Domain          Path     Query String
+(The party type) (The address) (The room) (Special requests)
+</code></pre>
+
+<hr>
+
+<h2>Serving Static Files: Showing Off Your Lookbook</h2>
+<p>You can't just let people wander around your entire server—that's a major security faux pas! You need to tell Express, "Hey, only show them the stuff in this one specific folder." This folder (usually called `public`) is where you put all your client-side files like HTML, CSS, and images. It's super easy to set up.</p>
+<pre><code>
+// This one line tells Express to make everything in the "public" folder accessible.
+app.use(express.static("public"));
+
+// Now, if you have a file at public/index.html, users can see it!
+// And if you have an image at public/images/logo.png, you can use it in your HTML.
+</code></pre>

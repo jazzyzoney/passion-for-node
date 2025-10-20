@@ -1,0 +1,41 @@
+<h1>CRUD Operations: The Head-to-Toe Look</h1>
+<p><strong>CRUD</strong> is the complete package for managing your collection. It stands for <strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate, and <strong>D</strong>elete. It’s how you handle every piece from its debut to its final bow.</p>
+
+<hr>
+
+<h2>READ (GET): Checking Out the Collection</h2>
+<p>A <strong>GET</strong> request is for when clients want to see your stuff. You can show them the whole collection or just one specific piece if they know its ID.</p>
+<pre><code>
+// Send back all the outfits
+app.get("/outfits", (req, res) => {
+  res.send({ data: outfits });
+});
+
+// Send back the outfit with a specific ID
+app.get("/outfits/:id", (req, res) => {
+  const outfit = outfits.find(o => o.id === Number(req.params.id));
+  res.send({ data: outfit });
+});
+</code></pre>
+
+<hr>
+
+<h2>CREATE (POST): Adding a New Look</h2>
+<p>A <strong>POST</strong> request is for adding a brand new look to your collection. The client sends you the details (the `body`), and you add it. To make this work, you *have* to use the `express.json()` middleware. It’s like the translator that lets you understand what the client is sending.</p>
+<pre><code>
+// This middleware is NON-NEGOTIABLE for POST requests!
+app.use(express.json());
+
+app.post("/outfits", (req, res) => {
+  // req.body has all the deets for the new outfit
+  const newOutfit = req.body;
+  newOutfit.id = outfits.length + 1; // Give it a new ID
+  outfits.push(newOutfit);
+  res.send({ data: newOutfit });
+});
+</code></pre>
+
+<hr>
+
+<h2>UPDATE & DELETE: Remixing & Retiring Looks</h2>
+<p>Once you've mastered GET and POST, updating (<strong>PUT</strong>) and deleting (<strong>DELETE</strong>) a look is a total breeze. They follow similar patterns to get a specific item and then either change it or remove it from the collection.</p>

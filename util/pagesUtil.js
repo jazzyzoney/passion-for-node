@@ -6,6 +6,11 @@ export const frontpagePage = constructPage(frontpage, {
     tabTitle: "NodeJS | Welcome"
 })
 
+const game = readPage("./public/pages/game.html")
+export const gamePage = constructPage(game, {
+    tabTitle: "NodeJS | Game",
+}) 
+
 // pages 
 
 // fundamentals
@@ -19,15 +24,15 @@ export const loopsPage = constructPage(loops, {
     tabTitle: "NodeJS | Loops",
 })
 
-const variables = readPage("./public/pages/fundamentals/loops.html")
+const variables = readPage("./public/pages/fundamentals/variables.html")
 export const variablesPage = constructPage(variables, {
     tabTitle: "NodeJS | Variables",
 })
 
 // the backend environment 
-const packagemanagement = readPage("./public/pages/backendenvironment/packagemanagement.html")
-export const packagemanagementPage = constructPage(packagemanagement, {
-    tabTitle: "NodeJS | Packagemanagement",
+const nodejsandnpm = readPage("./public/pages/backendenvironment/nodejs&npm.html")
+export const nodejsandnpmPage = constructPage(nodejsandnpm, {
+    tabTitle: "NodeJS | NodeJS & npm",
 })
 
 const modules = readPage("./public/pages/backendenvironment/modules.html")
@@ -35,51 +40,36 @@ export const modulesPage = constructPage(modules, {
     tabTitle: "NodeJS | Modules",
 })
 
-const devtools = readPage("./public/pages/backendenvironment/devtools.html")
-export const devtoolsPage = constructPage(devtools, {
-    tabTitle: "NodeJS | Development Tools",
-})
-
-const envvariables = readPage("./public/pages/backendenvironment/envvariables.html")
-export const envvariablesPage = constructPage(envvariables, {
-    tabTitle: "NodeJS | Environment Variables",
+const tools = readPage("./public/pages/backendenvironment/tools.html")
+export const toolsPage = constructPage(tools, {
+    tabTitle: "NodeJS | Tools",
 })
 
 // express and rest apis
 const api = readPage("./public/pages/restapi/api.html")
 export const apiPage = constructPage(api, {
-    tabTitle: "NodeJS | REST API Design",
+    tabTitle: "NodeJS | REST API design",
 })
 
 const crud = readPage("./public/pages/restapi/crud.html")
 export const crudPage = constructPage(crud, {
-    tabTitle: "NodeJS | CRUD Operations",
-})
-
-const url = readPage("./public/pages/restapi/url.html")
-export const urlPage = constructPage(url, {
-    tabTitle: "NodeJS | Handling Requests",
+    tabTitle: "NodeJS | CRUD operations",
 })
 
 const servingfiles = readPage("./public/pages/restapi/servingfiles.html")
 export const servingfilesPage = constructPage(servingfiles, {
-    tabTitle: "NodeJS | Serving Files",
+    tabTitle: "NodeJS | Serving files",
 })
 
 // frontend and client-server interaction
 const fetchingdata = readPage("./public/pages/clientserver/fetchingdata.html")
 export const fetchingdataPage = constructPage(fetchingdata, {
-    tabTitle: "NodeJS | Fetching Data",
+    tabTitle: "NodeJS | Fetching data",
 })
 
 const htmlstructure = readPage("./public/pages/clientserver/htmlstructure.html")
 export const htmlstructurePage = constructPage(htmlstructure, {
-    tabTitle: "NodeJS | HTML Structure",
-})
-
-const redirection = readPage("./public/pages/clientserver/redirection.html")
-export const redirectionPage = constructPage(redirection, {
-    tabTitle: "NodeJS | Redirection",
+    tabTitle: "NodeJS | HTML structure",
 })
 
 // web architecture and deployment
@@ -90,10 +80,5 @@ export const renderingPage = constructPage(rendering, {
 
 const codestructure = readPage("./public/pages/deployment/codestructure.html")
 export const codestructurePage = constructPage(codestructure, {
-    tabTitle: "NodeJS | Code Structure",
-})
-
-const deployment = readPage("./public/pages/deployment/deployment.html")
-export const deploymentPage = constructPage(deployment, {
-    tabTitle: "NodeJS | Deployment",
+    tabTitle: "NodeJS | Code structure",
 })

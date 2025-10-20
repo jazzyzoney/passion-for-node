@@ -1,0 +1,34 @@
+<h1>Modules: Mixing & Matching Your Look</h1>
+<p>You would never keep your entire wardrobe in one giant pile, right? You separate things. That's what modules are for. They let you split your code into different files to keep things super organized and reusable. There are two main styles: the vintage look and the modern vibe.</p>
+
+<hr>
+
+<h2>CommonJS: The Vintage Look</h2>
+<p>This is the classic way Node.js handles modules. You use the <strong>`require()`</strong> function to import a file and <strong>`module.exports`</strong> to share your code with other files. It's a total throwback, but it works.</p>
+<pre><code>
+// In your style-helpers.js file
+function serveLook(look) {
+  return `Serving a ${look} look.`;
+}
+
+module.exports = { serveLook }; // Export your function.
+
+// In your main server.js file
+const styleHelper = require("./style-helpers.js");
+console.log(styleHelper.serveLook("fierce")); // Outputs: Serving a fierce look.
+</code></pre>
+
+<hr>
+
+<h2>ES Modules (ESM): The Modern Vibe</h2>
+<p>This is the new, trendy way to do it. It uses <strong>`import`</strong> and <strong>`export`</strong>, which is way more sleek and the standard in frontend JavaScript. To use it in Node.js, you just have to add `"type": "module"` to your `package.json`. So easy!</p>
+<pre><code>
+// In your style-helpers.js file
+export function serveLook(look) {
+  return `Serving a ${look} look.`;
+}
+
+// In your main server.js file
+import { serveLook } from "./style-helpers.js";
+console.log(serveLook("glam")); // Outputs: Serving a glam look.
+</code></pre>

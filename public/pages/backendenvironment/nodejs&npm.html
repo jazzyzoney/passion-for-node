@@ -1,0 +1,35 @@
+<h1>Node.js & NPM: The Runway & Your Personal Shopper</h1>
+<p>This is, like, the most important part of your backend collection. <strong>Node.js</strong> is the runway you build everything on, and <strong>NPM</strong> is your personal shopper who gets you all the coolest designer packages. Without them, you're not even in the show.</p>
+
+<hr>
+
+<h2>Node.js: The Main Stage</h2>
+<p>So, what even is Node.js? It's what lets you run your JavaScript code outside of a web browser. It's the magic that makes your server actually work. You write your code in a file (like `server.js`) and run it from your terminal.</p>
+<pre><code>
+# This command tells Node.js to run your file. It's showtime!
+node server.js
+</code></pre>
+
+<hr>
+
+<h2>NPM: Your Personal Shopper</h2>
+<p><strong>NPM (Node Package Manager)</strong> is like the world's biggest mall for code. You can find "packages" (pre-written code) for literally anything, from the Express framework to cool color libraries.</p>
+
+<h3>package.json: Your Style Bible</h3>
+<p>The <strong>`package.json`</strong> file is the list of all the designer pieces in your project. It keeps track of which packages you're using (your dependencies) and also holds your custom scripts. It's the most important file for keeping your project organized.</p>
+
+<h3>node_modules: The Walk-in Closet</h3>
+<p>When you install a package with NPM, it gets dropped into a folder called <strong>`node_modules`</strong>. This is your massive walk-in closet where all the code you've "bought" is stored. You never need to edit anything in here—just know it's where your stuff lives.</p>
+
+<h3>Scripts: Your Quick-Change Commands</h3>
+<p>You can add your own commands to `package.json` to make life easier. The most common one is a `start` script to run your server.</p>
+<pre><code>
+// Inside your package.json
+"scripts": {
+  "start": "node server.js",
+  "dev": "nodemon server.js"
+}
+
+# Now you can run this in the terminal instead of the long command. So chic!
+npm run dev
+</code></pre>

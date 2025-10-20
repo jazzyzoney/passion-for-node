@@ -1,0 +1,44 @@
+<h1>Express Server & API Design: Your Signature Collection</h1>
+<p>Okay, so it's time to actually build the runway! We're using <strong>Express</strong>, the only designer label that matters for building servers in Node.js. And every collection needs a set of rules—that's your <strong>REST API</strong>. It's how you tell the world how to interact with your flawless designs.</p>
+
+<hr>
+
+<h2>Creating Your Server: The Main Mannequin</h2>
+<p>Getting a server started with Express is, like, super easy. This is your main mannequin—the base that holds your entire collection. You should totally be able to write this from memory.</p>
+<pre><code>
+import express from "express";
+const app = express();
+
+const PORT = 8080;
+
+app.listen(PORT, () => {
+  console.log(`Server is stylin' on port ${PORT} 💋`);
+});
+</code></pre>
+
+<hr>
+
+<h2>Designing Your API: The Style Rules</h2>
+<p>An API is just a set of rules for communication. A good REST API is like a fashion collection where everything makes sense. There are three major rules to follow:</p>
+
+<h3>1. The Actions (HTTP Verbs)</h3>
+<p>These are the actions you can take with your collection. Always use the right one!</p>
+<ul>
+    <li><strong>GET:</strong> Just looking. Used to retrieve data.</li>
+    <li><strong>POST:</strong> Adding a new piece to the collection.</li>
+    <li><strong>PUT / PATCH:</strong> Changing or updating an existing piece.</li>
+    <li><strong>DELETE:</strong> Retiring a look from the collection. Forever.</li>
+</ul>
+
+<h3>2. The Labels (Resource Naming)</h3>
+<p>Your API paths should always be nouns and always be plural. It’s not `/getOutfit`, it’s `/outfits`. It's not `/accessory`, it's `/accessories`. So much chicer.</p>
+
+<h3>3. The Vibe (Ordering & Structure)</h3>
+<p>The structure should just make sense. To get a specific item, you use its ID. It's like finding a specific dress on a rack.</p>
+<pre><code>
+// Get all the outfits in the collection
+GET /outfits
+
+// Get the one specific, iconic outfit with ID 12
+GET /outfits/12
+</code></pre>

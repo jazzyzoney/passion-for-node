@@ -1,0 +1,35 @@
+<h1>Code Structure & Performance: The Flawless Execution</h1>
+<p>A grand entrance isn't just about the outfit—it's about the confident, flawless execution. A messy backstage or a clumsy walk can ruin the whole vibe. Your project's code needs to be perfectly organized and perform with an effortless, powerful strut.</p>
+
+<hr>
+
+<h2>Code Structure: Your Backstage Organization</h2>
+<p>A star knows exactly where everything is. Your code should be just as organized, with a clear separation between what the audience sees and what happens behind the scenes.</p>
+
+<h3>The Front Row vs. Backstage (Client vs. Server)</h3>
+<p>It's so important to know the difference:</p>
+<ul>
+    <li><strong>Client Files:</strong> This is everything in your `public` folder (HTML, CSS, browser-side JS). It's the "Front Row"—what the user actually sees and interacts with in their browser.</li>
+    <li><strong>Server Files:</strong> This is everything else (your Express server, API routes, database logic). It's the "Backstage"—all the magic that happens behind the curtain to make the show run.</li>
+</ul>
+
+<h3>Organizing Your Closet</h3>
+<p>Don't just throw all your frontend files into one folder. That's a total fashion disaster. A chic structure is way better for finding things and keeping your look clean. Argue for a vibe like this:</p>
+<pre><code>
+public/
+├── pages/
+│   ├── home.html
+│   └── about.html
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── main.js
+└── index.html
+</code></pre>
+
+<hr>
+
+<h2>Performance: Your Effortless Strut</h2>
+<p>Your app's performance is like a model's walk—it needs to be smooth, fast, and confident. Clunky, slow loading is a major trip-up. How and where you place your code has a huge impact on your app's memory and speed.</p>
+<p>Remember this: heavy lifting is for the backstage crew (the server). Don't make the front row (the client's browser) do a bunch of intense calculations or process huge amounts of data. It slows everything down and ruins the user's experience. Keep your client-side code light and breezy for that flawless, effortless strut.</p>

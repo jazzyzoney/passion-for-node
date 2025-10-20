@@ -1,0 +1,61 @@
+<h1>Semantic HTML: The Flawless Silhouette</h1>
+<p>A truly iconic look isn't just about the flashy accessories; it's about the structure and the perfect fit underneath. <strong>Semantic HTML</strong> gives your webpage a flawless silhouette, making sure everything is where it's supposed to be. It's not just for looks—it helps browsers and search engines understand your vibe.</p>
+
+<hr>
+
+<h2>The Main Layout: Your Head-to-Toe Look</h2>
+<p>Using the right tags for the right parts of your page is non-negotiable. It's the difference between a custom-fit design and a fashion disaster.</p>
+<ul>
+    <li><code>&lt;header&gt;</code>: The top of your look. Usually has the main title and logo.</li>
+    <li><code>&lt;nav&gt;</code>: Your navigation bar. It's like the map to your entire collection.</li>
+    <li><code>&lt;main&gt;</code>: The star of the show! This is where the main, unique content of the page goes.</li>
+    <li><code>&lt;footer&gt;</code>: The bottom of the page. Perfect for copyright info or contact links.</li>
+</ul>
+<pre><code>
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My Glam Site&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;nav&gt;
+    &lt;a href="/"&gt;Home&lt;/a&gt;
+    &lt;a href="/looks"&gt;Looks&lt;/a&gt;
+  &lt;/nav&gt;
+  &lt;main&gt;
+    &lt;p&gt;The main content goes here!&lt;/p&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2025 Glam-Stack&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h3>The Footer: The Perfect Shoes</h3>
+<p>A footer that floats in the middle of the page is a total faux pas. To make sure your footer always stays at the bottom—like the perfect shoes completing the look—you can use this simple CSS trick with Flexbox.</p>
+<pre><code>
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+</code></pre>
+
+<hr>
+
+<h2>JavaScript Modules: Your Style Kit</h2>
+<p>You need to link your JavaScript to your HTML to make your page interactive. There are two ways to bring in your style kit.</p>
+
+<h3>The Classic Script</h3>
+<p>This is the old-school way. It just runs the script file.</p>
+<pre><code>
+&lt;script src="/assets/js/main.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h3>The Module Script</h3>
+<p>This is the modern, chic way. Adding <strong>`type="module"`</strong> lets you use `import` and `export` directly in your browser-side JavaScript, just like in Node.js! It's essential for keeping your front-end code as organized as your closet.</p>
+<pre><code>
+&lt;script type="module" src="/assets/js/main.js"&gt;&lt;/script&gt;
+</code></pre>
